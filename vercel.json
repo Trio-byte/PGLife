@@ -4,5 +4,14 @@
   },
   "routes": [
     { "src": "/(.*)", "dest": "/api/index.php" }
+  ],
+  "builds": [
+    {
+      "src": "api/**/*.php",
+      "use": "@vercel/php",
+      "config": {
+        "runtime": "nodejs18.x"
+      }
+    }
   ]
 }
